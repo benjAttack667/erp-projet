@@ -1,0 +1,12 @@
+package fr.ece.project.dao;
+
+import fr.ece.project.models.Task;
+import java.util.List;
+
+public interface TaskDAO {
+    List<Task> getByProject(int projectId);
+    boolean save(Task task);
+    boolean update(Task task);
+    boolean delete(int taskId);
+}
+
