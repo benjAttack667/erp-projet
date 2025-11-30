@@ -5,51 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3d90b3e-0b87-494c-94c4-fc545d3dc7c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ resources/fxml/comments.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ resources/fxml/dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ resources/fxml/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ resources/fxml/projects.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ resources/fxml/tasks.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ resources/fxml/users.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ resources/sql/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/CommentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/ProjectsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/TasksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/UsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/CommentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/ProjectDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/TaskDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/CommentDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/ProjectDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/TaskDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/UserDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/exceptions/AuthenticationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/services/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/services/ProjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/services/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/utils/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/utils/HashUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minierp/utils/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ resources/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ resources/sql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ resources/sql/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/dao/CommentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/CommentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/ProjectDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/dao/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/TaskDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/TaskDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/TaskDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/models/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/models/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/utils/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/utils/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/utils/HashUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/utils/HashUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minierp/utils/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minierp/utils/Session.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,9 +68,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -123,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764457272800</updated>
-      <workItem from="1764457274081" duration="5016000" />
+      <workItem from="1764457274081" duration="11994000" />
     </task>
     <servers />
   </component>
@@ -131,9 +105,19 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="fc8431a4-c06f-4315-b131-5675447d6f1b" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="fc8431a4-c06f-4315-b131-5675447d6f1b">
           <value>
             <State />
           </value>

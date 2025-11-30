@@ -1,4 +1,12 @@
 package com.minierp.dao;
 
-public class ProjectDAO {
+import com.minierp.models.Project;
+import java.util.List;
+
+public interface ProjectDAO {
+    Project findById(int id);
+    List<Project> getAll();
+    boolean save(Project project);
+    boolean update(Project project);
+    boolean delete(int id);
 }

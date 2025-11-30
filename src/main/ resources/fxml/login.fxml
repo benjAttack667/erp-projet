@@ -6,9 +6,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.scene.control.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.minierp.controllers.LoginController">
+
+<Label text="Connexion - Mini ERP" />
+<TextField fx:id="usernameField" promptText="Nom d'utilisateur"/>
+<PasswordField fx:id="passwordField" promptText="Mot de passe"/>
+<Button text="Se connecter" onAction="#onLogin"/>
+
+</VBox>
