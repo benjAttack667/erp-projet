@@ -4,9 +4,9 @@ import fr.ece.project.models.Task;
 import java.util.List;
 
 public interface TaskDAO {
-    List<Task> getByProject(int projectId);
+    List<Task> getByProject(String projectId);
     boolean save(Task task);
     boolean update(Task task);
-    boolean delete(int taskId);
+    boolean delete(String taskId);
 }
 

@@ -9,7 +9,7 @@ public class ProjectService {
     private final ProjectDAOImpl projectDAO = new ProjectDAOImpl();
 
     public List<Project> getAllProjects() { return projectDAO.getAll(); }
-    public Project findById(int id) { return projectDAO.findById(id); }
+    public Project findById(String id) { return projectDAO.findById(id); }
     public boolean createProject(Project p) { return projectDAO.save(p); }
 }
 

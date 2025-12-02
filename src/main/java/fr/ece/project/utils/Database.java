@@ -8,7 +8,7 @@ public final class Database {
 
     private static final String URL = "jdbc:mysql://localhost:3306/minierp?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "";
+    private static final String PASS = "root";
 
     public static Connection getConnection() {
         try {

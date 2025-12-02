@@ -1,15 +1,15 @@
 package fr.ece.project.models;
 
 public class Task {
-    private int id;
+    private String id;
     private String title;
     private String status;
-    private int projectId;
-    private int assignedTo;
+    private String projectId;
+    private String assignedTo;
 
     public Task() {}
 
-    public Task(int id, String title, String status, int projectId, int assignedTo) {
+    public Task(String id, String title, String status, String projectId, String assignedTo) {
         this.id = id;
         this.title = title;
         this.status = status;
@@ -17,8 +17,8 @@ public class Task {
         this.assignedTo = assignedTo;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
@@ -26,10 +26,10 @@ public class Task {
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
 
-    public int getProjectId() { return projectId; }
-    public void setProjectId(int projectId) { this.projectId = projectId; }
+    public String getProjectId() { return projectId; }
+    public void setProjectId(String projectId) { this.projectId = projectId; }
 
-    public int getAssignedTo() { return assignedTo; }
-    public void setAssignedTo(int assignedTo) { this.assignedTo = assignedTo; }
+    public String getAssignedTo() { return assignedTo; }
+    public void setAssignedTo(String assignedTo) { this.assignedTo = assignedTo; }
 }
 

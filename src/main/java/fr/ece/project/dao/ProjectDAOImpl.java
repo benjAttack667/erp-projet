@@ -17,11 +17,7 @@ public class ProjectDAOImpl implements ProjectDAO {
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    Project p = new Project();
-                    p.setId(rs.getInt("id"));
-                    p.setName(rs.getString("name"));
-                    p.setDescription(rs.getString("description"));
-                    p.setManagerId(rs.getInt("manager_id"));
+                    Project p = new Project(rs.getString("id"),rs.getString("name"),rs.getString("description"),rs.getString("manager_id"));
                     list.add(p);
                 }
             }
@@ -30,17 +26,13 @@ public class ProjectDAOImpl implements ProjectDAO {
     }
 
     @Override
-    public Project findById(int id) {
+    public Project findById(String id) {
         String sql = "SELECT id, name, description, manager_id FROM projects WHERE id = ?";
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
-            ps.setInt(1, id);
+            ps.setString(1, id);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    Project p = new Project();
-                    p.setId(rs.getInt("id"));
-                    p.setName(rs.getString("name"));
-                    p.setDescription(rs.getString("description"));
-                    p.setManagerId(rs.getInt("manager_id"));
+                    Project p = new Project(rs.getString("id"),rs.getString("name"),rs.getString("description"),rs.getString("manager_id"));
                     return p;
                 }
             }
@@ -54,7 +46,7 @@ public class ProjectDAOImpl implements ProjectDAO {
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setString(1, p.getName());
             ps.setString(2, p.getDescription());
-            ps.setInt(3, p.getManagerId());
+            ps.setString(3, p.getManagerId());
             return ps.executeUpdate() == 1;
         } catch (Exception e) { e.printStackTrace(); }
         return false;
@@ -66,18 +58,18 @@ public class ProjectDAOImpl implements ProjectDAO {
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setString(1, p.getName());
             ps.setString(2, p.getDescription());
-            ps.setInt(3, p.getManagerId());
-            ps.setInt(4, p.getId());
+            ps.setString(3, p.getManagerId());
+            ps.setString(4, p.getId());
             return ps.executeUpdate() == 1;
         } catch (Exception e) { e.printStackTrace(); }
         return false;
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(String id) {
         String sql = "DELETE FROM projects WHERE id = ?";
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
-            ps.setInt(1, id);
+            ps.setString(1, id);
             return ps.executeUpdate() == 1;
         } catch (Exception e) { e.printStackTrace(); }
         return false;

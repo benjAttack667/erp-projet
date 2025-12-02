@@ -4,7 +4,7 @@ import fr.ece.project.models.Comment;
 import java.util.List;
 
 public interface CommentDAO {
-    List<Comment> getByTask(int taskId);
+    List<Comment> getByTask(String taskId);
     boolean save(Comment c);
-    boolean delete(int id);
+    boolean delete(String id);
 }
