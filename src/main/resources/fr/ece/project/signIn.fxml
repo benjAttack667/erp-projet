@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="523.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.ece.project.controllers.SignInController">
+    <children>
+        <Pane prefHeight="61.0" prefWidth="683.0" style="-fx-background-color: #0d0173;">
+            <children>
+                <Label layoutX="14.0" layoutY="13.0" text="ECE-ERP" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Hyperlink layoutX="511.0" layoutY="19.0" text="Connexion" textFill="WHITE" />
+                <Hyperlink layoutX="592.0" layoutY="19.0" text="Inscription" textFill="WHITE" />
+            </children></Pane>
+        <Pane layoutX="215.0" layoutY="113.0" prefHeight="332.0" prefWidth="253.0" style="-fx-background-color: #e3e8e3;">
+            <children>
+                <TextField id="surnameField" layoutX="52.0" layoutY="32.0" />
+                <TextField id="nameField" layoutX="52.0" layoutY="80.0" />
+                <TextField id="emailField" layoutX="52.0" layoutY="136.0" />
+                <DatePicker id="dateOfBirthField" layoutX="39.0" layoutY="236.0" />
+                <PasswordField id="passwordField" layoutX="52.0" layoutY="189.0" />
+                <Label layoutX="63.0" layoutY="14.0" text="Nom" />
+                <Label layoutX="62.0" layoutY="63.0" text="Prénom" />
+                <Label layoutX="58.0" layoutY="119.0" text="email" />
+                <Label layoutX="58.0" layoutY="172.0" text="Mot de passe" />
+                <Label layoutX="44.0" layoutY="219.0" text="Date de Naissance" />
+                <Label layoutX="77.0" layoutY="267.0" text="Rôle" />
+                <MenuButton id="roleMenu" layoutX="77.0" layoutY="284.0" mnemonicParsing="false" text="Choisir un rôle">
+                    <items>
+                        <MenuItem id="emplyeChoice" mnemonicParsing="false" text="Employé" />
+                        <MenuItem id="managerChoice" mnemonicParsing="false" text="Manager" />
+                    </items>
+                </MenuButton>
+            </children>
+        </Pane>
+        <Label layoutX="308.0" layoutY="85.0" text="Inscription" textAlignment="CENTER" textFill="#0d0173">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Pane layoutY="467.0" prefHeight="61.0" prefWidth="683.0" style="-fx-background-color: #0d0173;">
+            <children>
+                <Label layoutX="241.0" layoutY="22.0" text="© 2025 ECE-ERP. Tous droits réservés." textAlignment="CENTER" textFill="WHITE" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
