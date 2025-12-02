@@ -29,10 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `comments` (
                             `id` varchar(255) NOT NULL,
-                            `taskId` int(11) NOT NULL,
-                            `userId` int(11) NOT NULL,
+                            `taskId` varchar(255) NOT NULL,
+                            `userId` varchar(255) NOT NULL,
                             `content` text NOT NULL,
-                            `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+                            `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                            Foreign Key (taskId) REFERENCES tasks(id) ON DELETE CASCADE,
+                            Foreign Key (userId) REFERENCES users(id) ON DELETE CASCADE
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -45,9 +48,10 @@ CREATE TABLE `projects` (
                             `id` varchar(255) NOT NULL,
                             `name` varchar(150) NOT NULL,
                             `description` text,
-                            `managerId` int(11) NOT NULL,
+                            `managerId` varchar(255) NOT NULL,
                             `startDate` date DEFAULT NULL,
-                            `endDate` date DEFAULT NULL
+                            `endDate` date DEFAULT NULL,
+                            Foreign Key (managerId) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -60,10 +64,12 @@ CREATE TABLE `tasks` (
                          `id` varchar(255) NOT NULL,
                          `title` varchar(150) NOT NULL,
                          `description` text,
-                         `status` varchar(50) NOT NULL,
+                         `status` ENUM('TODO', 'IN PROGRESS', 'DONE') DEFAULT 'TODO',
                          `dueDate` date DEFAULT NULL,
-                         `projectId` int(11) NOT NULL,
-                         `assignedTo` int(11) NOT NULL
+                         `projectId` varchar(255) NOT NULL,
+                         `assignedTo` varchar(255) NOT NULL,
+                         Foreign Key (assignedTo) REFERENCES users(id) ON DELETE CASCADE,
+                         Foreign Key (projectId) REFERENCES projects(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -77,7 +83,7 @@ CREATE TABLE `users` (
                          `surname` varchar(100) NOT NULL,
                          `name` varchar(100) NOT NULL,
                          `passwordHash` varchar(255) NOT NULL,
-                         `role` varchar(50) NOT NULL,
+                         `role` ENUM('ADMIN','MANAGER','EMPLOYEE') NOT NULL,
                          `email` varchar(150) NOT NULL,
                          `dateOfBirth` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
