@@ -5,8 +5,8 @@ import java.util.List;
 
 public interface ProjectDAO {
     List<Project> getAll();
-    Project findById(int id);
+    Project findById(String id);
     boolean save(Project p);
     boolean update(Project p);
-    boolean delete(int id);
+    boolean delete(String id);
 }

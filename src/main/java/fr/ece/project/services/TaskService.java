@@ -8,9 +8,9 @@ import java.util.List;
 public class TaskService {
     private final TaskDAOImpl taskDAO = new TaskDAOImpl();
 
-    public List<Task> getByProject(int projectId) { return taskDAO.getByProject(projectId); }
+    public List<Task> getByProject(String projectId) { return taskDAO.getByProject(projectId); }
     public boolean createTask(Task t) { return taskDAO.save(t); }
     public boolean updateTask(Task t) { return taskDAO.update(t); }
-    public boolean deleteTask(int id) { return taskDAO.delete(id); }
+    public boolean deleteTask(String id) { return taskDAO.delete(id); }
 }
 

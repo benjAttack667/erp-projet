@@ -18,7 +18,7 @@ public class UserDAOImpl implements UserDAO {
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
                     User u = new User();
-                    u.setId(rs.getInt("id"));
+                    u.setId(rs.getString("id"));
                     u.setUsername(rs.getString("username"));
                     u.setPasswordHash(rs.getString("password_hash"));
                     u.setRole(rs.getString("role"));
@@ -37,7 +37,7 @@ public class UserDAOImpl implements UserDAO {
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     User u = new User();
-                    u.setId(rs.getInt("id"));
+                    u.setId(rs.getString("id"));
                     u.setUsername(rs.getString("username"));
                     u.setPasswordHash(rs.getString("password_hash"));
                     u.setRole(rs.getString("role"));
@@ -59,5 +59,6 @@ public class UserDAOImpl implements UserDAO {
         } catch (Exception e) { e.printStackTrace(); }
         return false;
     }
+
 }
 

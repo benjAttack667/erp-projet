@@ -11,19 +11,14 @@ import java.util.List;
 
 public class TaskDAOImpl implements TaskDAO {
     @Override
-    public List<Task> getByProject(int projectId) {
+    public List<Task> getByProject(String projectId) {
         List<Task> list = new ArrayList<>();
         String sql = "SELECT id, title, status, project_id, assigned_to FROM tasks WHERE project_id = ?";
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
-            ps.setInt(1, projectId);
+            ps.setString(1, projectId);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    Task t = new Task();
-                    t.setId(rs.getInt("id"));
-                    t.setTitle(rs.getString("title"));
-                    t.setStatus(rs.getString("status"));
-                    t.setProjectId(rs.getInt("project_id"));
-                    t.setAssignedTo(rs.getInt("assigned_to"));
+                    Task t = new Task(rs.getString("id"),rs.getString("title"),rs.getString("status"),rs.getString("project_id"),rs.getString("assigned_to"));
                     list.add(t);
                 }
             }
@@ -37,8 +32,8 @@ public class TaskDAOImpl implements TaskDAO {
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setString(1, task.getTitle());
             ps.setString(2, task.getStatus());
-            ps.setInt(3, task.getProjectId());
-            ps.setInt(4, task.getAssignedTo());
+            ps.setString(3, task.getProjectId());
+            ps.setString(4, task.getAssignedTo());
             return ps.executeUpdate() == 1;
         } catch (Exception e) { e.printStackTrace(); }
         return false;
@@ -50,19 +45,19 @@ public class TaskDAOImpl implements TaskDAO {
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setString(1, task.getTitle());
             ps.setString(2, task.getStatus());
-            ps.setInt(3, task.getProjectId());
-            ps.setInt(4, task.getAssignedTo());
-            ps.setInt(5, task.getId());
+            ps.setString(3, task.getProjectId());
+            ps.setString(4, task.getAssignedTo());
+            ps.setString(5, task.getId());
             return ps.executeUpdate() == 1;
         } catch (Exception e) { e.printStackTrace(); }
         return false;
     }
 
     @Override
-    public boolean delete(int taskId) {
+    public boolean delete(String taskId) {
         String sql = "DELETE FROM tasks WHERE id = ?";
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
-            ps.setInt(1, taskId);
+            ps.setString(1, taskId);
             return ps.executeUpdate() == 1;
         } catch (Exception e) { e.printStackTrace(); }
         return false;
