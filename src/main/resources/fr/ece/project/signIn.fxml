@@ -16,7 +16,7 @@
                 <Hyperlink layoutX="511.0" layoutY="19.0" text="Connexion" textFill="WHITE" />
                 <Hyperlink layoutX="592.0" layoutY="19.0" text="Inscription" textFill="WHITE" />
             </children></Pane>
-        <Pane layoutX="215.0" layoutY="113.0" prefHeight="332.0" prefWidth="253.0" style="-fx-background-color: #e3e8e3;">
+        <Pane layoutX="215.0" layoutY="98.0" prefHeight="358.0" prefWidth="253.0" style="-fx-background-color: #e3e8e3;">
             <children>
                 <TextField id="surnameField" layoutX="52.0" layoutY="32.0" />
                 <TextField id="nameField" layoutX="52.0" layoutY="80.0" />
@@ -35,9 +35,10 @@
                         <MenuItem id="managerChoice" mnemonicParsing="false" text="Manager" />
                     </items>
                 </MenuButton>
+            <Button id="inscriptionButton" layoutX="100.0" layoutY="319.0" mnemonicParsing="false" text="S'inscrire" />
             </children>
         </Pane>
-        <Label layoutX="308.0" layoutY="85.0" text="Inscription" textAlignment="CENTER" textFill="#0d0173">
+        <Label layoutX="306.0" layoutY="70.0" text="Inscription" textAlignment="CENTER" textFill="#0d0173">
             <font>
                 <Font size="18.0" />
             </font>
