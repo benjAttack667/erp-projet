@@ -18,7 +18,7 @@ public class CommentDAOImpl implements CommentDAO {
             ps.setString(1, taskId);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    Comment cm = new Comment(rs.getString("id"),rs.getString("task_id"),rs.getString("user_id"),rs.getString("content"));
+                    Comment cm = new Comment(rs.getString("task_id"),rs.getString("user_id"),rs.getString("content"));
                     list.add(cm);
                 }
             }

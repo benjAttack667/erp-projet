@@ -9,7 +9,7 @@ public class Project {
     public Project(String id, String name, String description, String managerId) {}
 
     public Project( String name, String description, String managerId) {
-        this.id = java.util.UUID.randomUUID().toString();;
+        this.id = java.util.UUID.randomUUID().toString();
         this.name = name;
         this.description = description;
         this.managerId = managerId;

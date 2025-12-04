@@ -6,14 +6,14 @@ import static fr.ece.project.utils.HashUtil.hash;
 
 public class User {
     protected String id;
-    protected String username;
+    protected String surname;
     protected String passwordHash;
     protected String role;
     protected String email;
     protected String name;
 
-    public User(String username, String role, String passwordHash) {
-        this.username = username;
+    public User(String surname,String name, String role, String passwordHash) {
+        this.surname = surname;
         this.role = role;
         this.passwordHash = passwordHash;
         this.email = email;
@@ -22,9 +22,9 @@ public class User {
 
     public User() {}
 
-    public User(int id, String username, String passwordHash) {
+    public User(String surname, String passwordHash) {
         this.id = UUID.randomUUID().toString();
-        this.username = username;
+        this.surname = surname;
         this.passwordHash = hash(passwordHash);
         this.name = null;
         this.email = null;
@@ -50,8 +50,8 @@ public class User {
 
     public String getId() { return id; }
 
-    public String getUsername() { return username; }
-    public void setUsername(String username) { this.username = username; }
+    public String getSurname() { return surname; }
+    public void setUsername(String username) { this.surname = username; }
 
     public String getPasswordHash() { return passwordHash; }
     public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }

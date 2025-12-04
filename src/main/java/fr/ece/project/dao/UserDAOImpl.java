@@ -50,11 +50,12 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean save(User user) {
-        String sql = "INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO users (name,surname, password_hash, role) VALUES (?, ?, ?, ?)";
         try (Connection c = Database.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
-            ps.setString(1, user.getUsername());
-            ps.setString(2, user.getPasswordHash());
-            ps.setString(3, user.getRole());
+            ps.setString(1, user.getName());
+            ps.setString(2, user.getSurname());
+            ps.setString(3, user.getPasswordHash());
+            ps.setString(4, user.getRole());
             return ps.executeUpdate() == 1;
         } catch (Exception e) { e.printStackTrace(); }
         return false;

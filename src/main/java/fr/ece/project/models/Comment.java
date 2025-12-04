@@ -8,8 +8,8 @@ public class Comment {
 
     public Comment() {}
 
-    public Comment(String id, String taskId, String userId, String content) {
-        this.id = id;
+    public Comment(String taskId, String userId, String content) {
+        this.id = java.util.UUID.randomUUID().toString();;
         this.taskId = taskId;
         this.userId = userId;
         this.content = content;

@@ -9,6 +9,10 @@ module fr.ece.project {
     exports fr.ece.project;
     exports fr.ece.project.models;
     exports fr.ece.project.utils;
-    opens fr.ece.project.models to javafx.fxml;
-    opens fr.ece.project.test to javafx.graphics;
+
+
+    opens fr.ece.project.controllers to javafx.fxml;
+    exports fr.ece.project.controllers;
+
+
 }

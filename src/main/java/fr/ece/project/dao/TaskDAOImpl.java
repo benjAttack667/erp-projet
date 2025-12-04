@@ -18,7 +18,7 @@ public class TaskDAOImpl implements TaskDAO {
             ps.setString(1, projectId);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    Task t = new Task(rs.getString("id"),rs.getString("title"),rs.getString("status"),rs.getString("project_id"),rs.getString("assigned_to"));
+                    Task t = new Task(rs.getString("title"),rs.getString("status"),rs.getString("project_id"),rs.getString("assigned_to"));
                     list.add(t);
                 }
             }

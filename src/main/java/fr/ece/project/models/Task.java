@@ -9,8 +9,8 @@ public class Task {
 
     public Task() {}
 
-    public Task(String id, String title, String status, String projectId, String assignedTo) {
-        this.id = id;
+    public Task( String title, String status, String projectId, String assignedTo) {
+        this.id = java.util.UUID.randomUUID().toString();;
         this.title = title;
         this.status = status;
         this.projectId = projectId;
