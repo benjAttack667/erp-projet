@@ -1,23 +1,28 @@
 package fr.ece.project.models;
 
+import fr.ece.project.utils.HashUtil;
+
 import java.util.UUID;
 
 import static fr.ece.project.utils.HashUtil.hash;
 
 public class User {
     protected String id;
+    protected String name;
     protected String surname;
+    protected String email;
     protected String passwordHash;
     protected String role;
-    protected String email;
-    protected String name;
 
-    public User(String surname,String name, String role, String passwordHash) {
-        this.surname = surname;
-        this.role = role;
-        this.passwordHash = passwordHash;
-        this.email = email;
+    public User(String name, String surname, String email, String password, String role) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.role = role;
+
+
+        this.passwordHash = HashUtil.hash(password);
     }
 
     public User() {}

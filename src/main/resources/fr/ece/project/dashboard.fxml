@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="fr.ece.project.controllers.DashboardController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefWidth="900" prefHeight="600"
+            style="-fx-background-color: #FFFFFF;">
 
-</AnchorPane>
+    <!-- ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ TOP BAR ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ -->
+    <top>
+        <Pane prefHeight="60" style="-fx-background-color: #0d0173;">
+            <children>
+                <Label text="ECE-ERP"
+                       layoutX="20" layoutY="18"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20"/>
+                    </font>
+                </Label>
+
+                <!-- Liens -->
+                <HBox spacing="20" layoutX="700" layoutY="18">
+                    <children>
+                        <Hyperlink text="Dashboard" textFill="WHITE" onAction="#goDashboard"/>
+                        <Hyperlink text="Profil" textFill="WHITE" onAction="#goProfil"/>
+                        <Hyperlink text="Déconnexion" textFill="WHITE" onAction="#logout"/>
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+    </top>
+
+
+    <!-- ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ SIDE MENU ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ -->
+    <left>
+        <VBox prefWidth="180" spacing="15" style="-fx-background-color: #F0F0F0; -fx-padding: 20;">
+            <children>
+                <Label text="Navigation" style="-fx-font-size: 15; -fx-font-weight: bold;"/>
+
+                <Button text="Dashboard"
+                        prefWidth="150"
+                        style="-fx-background-color: #0d0173; -fx-text-fill: white;"
+                        onAction="#goDashboard"/>
+
+                <Button text="Tâches"
+                        prefWidth="150"
+                        style="-fx-background-color: #0d0173; -fx-text-fill: white;"
+                        onAction="#goTasks"/>
+
+                <Button text="Profil"
+                        prefWidth="150"
+                        style="-fx-background-color: #0d0173; -fx-text-fill: white;"
+                        onAction="#goProfil"/>
+
+                <Button text="Déconnexion"
+                        prefWidth="150"
+                        style="-fx-background-color: red; -fx-text-fill: white;"
+                        onAction="#logout"/>
+            </children>
+        </VBox>
+    </left>
+
+
+    <!-- ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN CONTENT ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ -->
+    <center>
+        <AnchorPane fx:id="mainContent" style="-fx-padding: 20;">
+            <children>
+                <Label text="Bienvenue sur votre Dashboard"
+                       layoutX="200" layoutY="150"
+                       style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+            </children>
+        </AnchorPane>
+    </center>
+
+
+    <!-- ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ BOTTOM BAR ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ -->
+    <bottom>
+        <Pane prefHeight="50" style="-fx-background-color: #0d0173;">
+            <children>
+                <Label text="© 2025 ECE-ERP. Tous droits réservés."
+                       layoutX="330" layoutY="17"
+                       textFill="WHITE"
+                       style="-fx-font-size: 11; -fx-font-weight: bold;"/>
+            </children>
+        </Pane>
+    </bottom>
+
+</BorderPane>

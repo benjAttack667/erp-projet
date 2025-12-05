@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="fr.ece.project.controllers.CommentsController"
-            prefHeight="400.0" prefWidth="600.0" >
+            fx:controller="fr.ece.project.controllers.CommentsController">
 
-</AnchorPane>
+    <!-- 🟦 SIDEBAR -->
+    <left>
+        <VBox spacing="20" prefWidth="180" style="-fx-background-color: #0d0173; -fx-padding: 20;">
+            <children>
+                <Label text="ECE-ERP" textFill="white" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                <Button text="Dashboard" onAction="#goDashboard" style="-fx-background-color: white;" />
+                <Button text="Projects" onAction="#goProjects" style="-fx-background-color: white;" />
+                <Button text="Tasks" onAction="#goTasks" style="-fx-background-color: white;" />
+                <Button text="Comments" onAction="#goComments" style="-fx-background-color: white;" />
+                <Button text="Logout" onAction="#logout" style="-fx-background-color: #ff4040; -fx-text-fill: white;" />
+            </children>
+        </VBox>
+    </left>
+
+    <!-- 🟩 CONTENT -->
+    <center>
+        <VBox spacing="20" style="-fx-padding: 30;">
+            <children>
+                <Label text="Commentaires" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+                <HBox spacing="15">
+                    <children>
+                        <Label text="Sélectionner une tâche :" />
+                        <ComboBox fx:id="taskComboBox" prefWidth="300" />
+                    </children>
+                </HBox>
+
+                <Label text="Commentaires :" style="-fx-font-size: 14;" />
+                <ListView fx:id="commentsList" prefHeight="250" />
+
+                <Label text="Ajouter un commentaire :" />
+                <TextArea fx:id="commentField" prefHeight="100" />
+
+                <Button text="Ajouter" onAction="#onAddComment"
+                        style="-fx-background-color: #0d0173; -fx-text-fill: white;"/>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

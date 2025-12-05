@@ -17,6 +17,8 @@ public class SignInController {
     @FXML
     private TextField surnameField;
     @FXML
+    private TextField emailField;
+    @FXML
     private PasswordField passwordField;
     @FXML
     private DatePicker datePicker;
@@ -56,23 +58,35 @@ public class SignInController {
 
     @FXML
     public void onSignIn(ActionEvent e) throws IOException {
-        if (nameField.getText().isEmpty() || surnameField.getText().isEmpty() || passwordField.getText().isEmpty() || datePicker.getValue() == null) {
+
+        if (nameField.getText().isEmpty() ||
+                surnameField.getText().isEmpty() ||
+                emailField.getText().isEmpty() ||
+                passwordField.getText().isEmpty() ||
+                datePicker.getValue() == null) {
+
             label.setText("Veuillez remplir tous les champs.");
-
+            return;
         }
-        else {
-            boolean ok = userService.createUser(
-                    new User(surnameField.getText(),nameField.getText(),"BOFF",passwordField.getText())
-            );
-            if (ok) {
-                label.setText("Inscription reussie.");
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fr.ece.project/login.fxml"));
-                signInButton.getScene().setRoot(fxmlLoader.load());
 
-            } else {
-                label.setText("Erreur lors de l'inscription.");
-            }
+        User newUser = new User(
+                nameField.getText(),
+                surnameField.getText(),
+                emailField.getText(),
+                passwordField.getText(),
+                "ADMIN"  // ou Admin si tu veux
+        );
+
+        boolean ok = userService.createUser(newUser);
+
+        if (ok) {
+            label.setText("Inscription réussie.");
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fr/ece/project/login.fxml"));
+            signInButton.getScene().setRoot(fxmlLoader.load());
+        } else {
+            label.setText("Erreur lors de l'inscription.");
         }
+    }
 
     }
-}
+
