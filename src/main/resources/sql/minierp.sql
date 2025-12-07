@@ -49,6 +49,7 @@ CREATE TABLE `projects` (
                             `name` varchar(150) NOT NULL,
                             `description` text,
                             `managerId` varchar(255) NOT NULL,
+                            `status` ENUM('TODO', 'IN PROGRESS', 'DONE') DEFAULT 'TODO',
                             `startDate` date DEFAULT NULL,
                             `endDate` date DEFAULT NULL,
                             Foreign Key (managerId) REFERENCES users(id) ON DELETE CASCADE
