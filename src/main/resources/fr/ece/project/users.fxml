@@ -14,7 +14,18 @@
             prefHeight="400.0" prefWidth="600.0">
 
     <children>
-        <Pane prefHeight="61.0" prefWidth="683.0" style="-fx-background-color: #0d0173;">
+        <Pane id="menuConnecte" prefHeight="61.0" prefWidth="683.0" style="-fx-background-color: #0d0173;">
+            <children>
+                <Label layoutX="14.0" layoutY="13.0" text="ECE-ERP" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Hyperlink layoutX="511.0" layoutY="19.0" text="Connexion" textFill="WHITE" />
+                <Hyperlink layoutX="592.0" layoutY="19.0" text="Inscription" textFill="WHITE" />
+            </children></Pane>
+
+        <Pane id="menuNonConnecte" prefHeight="61.0" prefWidth="683.0" style="-fx-background-color: #0d0173;">
             <children>
                 <Label layoutX="14.0" layoutY="13.0" text="ECE-ERP" textFill="WHITE">
                     <font>
