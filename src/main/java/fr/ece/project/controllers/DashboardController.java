@@ -93,7 +93,7 @@ public class DashboardController {
         Stage stage = (Stage) ((Button)e.getSource()).getScene().getWindow();
 
         // Créer une nouvelle scène avec dimensions de base
-        Scene scene = new Scene(root, 1400, 800);
+        Scene scene = new Scene(root, 1200, 800);
 
         // Appliquer la scène à la fenêtre
         stage.setScene(scene);
