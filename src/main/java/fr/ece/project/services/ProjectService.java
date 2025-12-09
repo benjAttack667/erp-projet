@@ -8,8 +8,25 @@ import java.util.List;
 public class ProjectService {
     private final ProjectDAOImpl projectDAO = new ProjectDAOImpl();
 
-    public List<Project> getAllProjects() { return projectDAO.getAll(); }
-    public Project findById(String id) { return projectDAO.findById(id); }
-    public boolean createProject(Project p) { return projectDAO.save(p); }
-}
+    public List<Project> getAllProjects() {
+        return projectDAO.getAll();
+    }
 
+    public Project findById(String id) {
+        return projectDAO.findById(id);
+    }
+
+    public boolean createProject(Project p) {
+        return projectDAO.save(p);
+    }
+
+    public boolean updateProject(Project p) {
+        return projectDAO.update(p);
+    }
+
+    public boolean deleteProject(String id) {
+        return projectDAO.delete(id);
+    }
+
+
+}

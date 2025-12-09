@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600" prefWidth="400" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.ece.project.controllers.AddTaskController">
+
+    <!-- ▬▬▬ HEADER ▬▬▬ -->
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #0d0173; -fx-padding: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18;" text="Ajouter une tâche" />
+        </HBox>
+    </top>
+
+    <!-- ▬▬▬ FORMULAIRE ▬▬▬ -->
+    <center>
+        <VBox minHeight="-Infinity" spacing="15" style="-fx-padding: 20;">
+            <Label text="Titre :" />
+            <TextField fx:id="tfTitle" promptText="Titre de la tâche" />
+
+            <Label text="Description :" />
+            <TextArea fx:id="taDescription" prefRowCount="4" promptText="Description de la tâche" />
+
+            <Label text="Statut :" />
+            <ComboBox fx:id="cbStatus" prefWidth="200" />
+
+            <Label text="Date d'échéance :" />
+            <DatePicker fx:id="dpDueDate" />
+
+            <Label text="Projet :" />
+            <ComboBox fx:id="cbProjects" prefWidth="250" promptText="Sélectionner un projet" />
+
+            <Label text="Employé :" />
+            <ComboBox fx:id="cbEmployee" prefWidth="250" promptText="Sélectionner un employé" />
+
+        </VBox>
+    </center>
+
+    <!-- ▬▬▬ BOUTONS ▬▬▬ -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" spacing="10" style="-fx-padding: 15;">
+            <Button onAction="#cancel" style="-fx-background-color: #d30000; -fx-text-fill: white;" text="Annuler" />
+            <Button onAction="#saveTask" style="-fx-background-color: #0d0173; -fx-text-fill: white;" text="Enregistrer" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

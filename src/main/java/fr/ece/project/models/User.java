@@ -30,7 +30,7 @@ public class User {
     public User(String surname, String passwordHash) {
         this.id = UUID.randomUUID().toString();
         this.surname = surname;
-        this.passwordHash = hash(passwordHash);
+        this.passwordHash = passwordHash;
         this.name = null;
         this.email = null;
 

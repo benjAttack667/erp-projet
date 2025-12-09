@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.ece.project.controllers.EditTaskController"
+      spacing="10"
+      style="-fx-padding: 20; -fx-background-color: #FFFFFF;">
+
+    <Label text="Modifier une tâche" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="txtTitle" promptText="Titre"/>
+    <TextArea fx:id="txtDescription" promptText="Description" prefHeight="100"/>
+
+    <TextField fx:id="txtStatus" promptText="Statut"/>
+    <TextField fx:id="txtProjectId" promptText="ID du projet"/>
+    <TextField fx:id="txtAssignedTo" promptText="Assignée à"/>
+
+    <Button text="Enregistrer" onAction="#save"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+</VBox>

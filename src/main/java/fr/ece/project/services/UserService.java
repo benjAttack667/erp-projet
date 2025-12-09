@@ -9,7 +9,7 @@ public class UserService {
     private final UserDAOImpl userDAO = new UserDAOImpl();
 
     public List<User> getAllUsers() { return userDAO.getAll(); }
-    public User findByUsername(String username) { return userDAO.findByUsername(username); }
     public boolean createUser(User u) { return userDAO.save(u); }
+    public boolean updateUser(User u) { return userDAO.update(u); }
+    public boolean deleteUser(String id) { return userDAO.delete(id); }
 }
-

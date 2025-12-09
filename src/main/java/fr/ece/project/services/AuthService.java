@@ -8,15 +8,20 @@ import fr.ece.project.utils.Session;
 public class AuthService {
     private final UserDAOImpl userDAO = new UserDAOImpl();
 
-    public boolean login(String username, String password) {
-        User u = userDAO.findByUsername(username);
+    public boolean login(String email, String password) {
+        User u = userDAO.findByEmail(email);
 
         if (u == null) return false;
+        System.out.println("password saisi = " + password);
+        System.out.println("hash BDD       = " + u.getPasswordHash());
+        System.out.println("hash(password) = " + HashUtil.hash(password));
+
 
         if (HashUtil.verify(password, u.getPasswordHash())) {
             Session.setCurrentUser(u);
             return true;
         }
+
 
         return false;
     }

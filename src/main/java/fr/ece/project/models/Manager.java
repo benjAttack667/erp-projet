@@ -4,6 +4,6 @@ package fr.ece.project.models;
         private String role;
         public Manager( String username, String password, String role) {
         super(username, password);
-        this.role = "manager";
+        this.role = "MANAGER";
     }
 }

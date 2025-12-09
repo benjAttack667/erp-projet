@@ -12,5 +12,13 @@ public class TaskService {
     public boolean createTask(Task t) { return taskDAO.save(t); }
     public boolean updateTask(Task t) { return taskDAO.update(t); }
     public boolean deleteTask(String id) { return taskDAO.delete(id); }
+    public List<Task> getByUser(String userId) {
+        return taskDAO.getByUser(userId); // ici taskDAO, pas dao
+    }
+
+    public List<Task> getAllTasks() {
+        return taskDAO.getAllTasks();
+    }
+
 }
 

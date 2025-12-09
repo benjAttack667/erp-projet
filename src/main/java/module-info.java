@@ -3,6 +3,8 @@ module fr.ece.project {
     requires javafx.fxml;
     requires java.sql;
     requires java.desktop;
+    requires javafx.graphics;
+    requires javafx.base;
 
 
     opens fr.ece.project to javafx.fxml;
