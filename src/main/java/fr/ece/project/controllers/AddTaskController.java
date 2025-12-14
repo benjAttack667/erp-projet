@@ -56,7 +56,7 @@ public class AddTaskController {
         for (User u : userService.getAllUsers()) {
             if ("EMPLOYEE".equals(u.getRole())) {
                 // Ajout sous forme "Nom - ID"
-                cbEmployee.getItems().add(u.getName() + u.getSurname() + " - " + u.getId());
+                cbEmployee.getItems().add(u.getName() + " " + u.getSurname() + " - " + u.getId());
             }
         }
     }
@@ -92,11 +92,11 @@ public class AddTaskController {
 
         // Récupération du projet sélectionné
         String selectedProject = cbProjects.getValue();
-        String projectId = selectedProject.split(" - ")[0]; // extraire l'ID
+        String projectId = selectedProject.split(" - ")[1]; // extraire l'ID
 
         // Récupération de l'employé sélectionné
         String selectedEmployee = cbEmployee.getValue();
-        String employeeId = selectedEmployee.split(" - ")[0]; // extraire l'ID
+        String employeeId = selectedEmployee.split(" - ")[1]; // extraire l'ID
 
         // Création de la nouvelle tâche
         Task task = new Task();
@@ -132,7 +132,7 @@ public class AddTaskController {
             Stage newStage = new Stage();
             newStage.setTitle("Liste des tâches");
             newStage.setScene(new Scene(root));
-            newStage.setFullScreen(true); // Plein écran
+            newStage.setMaximized(true); // Plein écran
             newStage.show();
 
         } catch (IOException e) {
